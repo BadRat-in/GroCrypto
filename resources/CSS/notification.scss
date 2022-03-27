@@ -1,0 +1,51 @@
+.message-box {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 9999;
+  display: none;
+  background: greenyellow;
+  justify-content: center;
+  align-items: center;
+  &.active {
+    display: block;
+    animation: show-message ease 0.8s;
+  }
+  &.success {
+    background: greenyellow;
+  }
+  &.error {
+    background: red;
+    color: white;
+  }
+  &.warning {
+    background: orange;
+  }
+  &.inactive {
+    display: block;
+    animation: hide-message ease 0.8s;
+  }
+}
+@keyframes show-message {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hide-message {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resources/CSS/style.css" type="text/CSS" />
+    <link rel="stylesheet" href="./resources/CSS/color.css" type="text/CSS" />
+    <link rel="stylesheet" href="./resources/CSS/fonts.css" type="text/CSS" />
+    <link
+      rel="stylesheet"
+      href="./resources/CSS/notification.css"
+      type="text/CSS"
+    />
+    <link
+      rel="stylesheet"
+      href="./resources/CSS/register.css"
+      type="text/CSS"
+    />
+    <link
+      rel="shortcut icon"
+      href="./resources/image/logo.webp"
+      type="image/x-icon"
+    />
+    <title>Sign Up</title>
+  </head>
+
+  <body style="overflow: hidden">
+    <div class="message-box" id="message-box">Registration Successful</div>
+    <header
+      id="header"
+      style="width: 100vw; height: 100vh; background-color: var(--white)"
+    >
+      <img
+        id="loader"
+        src="./resources/image/logo.gif"
+        alt="Logo"
+        style="
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        "
+        type="image/GIF"
+      />
+    </header>
+    <div class="loading" id="register-form">
+      <div>
+        <lottie-player
+          class="lottie-player"
+          src="./resources/Json/registration.json"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </div>
+    <div class="body" id="body" style="display: none">
+      <nav class="nav-desk">
+        <div class="nav-bar">
+          <img
+            class="logo"
+            src="./resources/image/logo.gif"
+            alt="logo"
+            type="image/GIF"
+          />
+          <ul id="nav-list">
+            <li><a href="./index">home</a></li>
+            <li>
+              <a
+                href="https://coinmarketcap.com/rankings/exchanges/"
+                target="_blank"
+                >markets</a
+              >
+            </li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">pricing</a></li>
+            <li><a href="#">reports</a></li>
+
+            <li><a href="#">registration</a></li>
+            <li><a href="./contact">contact us</a></li>
+            <li><a href="#">about us</a></li>
+            <li>
+              <img
+                class="light-mode"
+                src="./resources/SVG/sun.svg"
+                id="light"
+                onclick="changeTheme(this, dark)"
+                type="image/SVG"
+              />
+              <img
+                class="dark-mode"
+                src="./resources/SVG/moon.svg"
+                id="dark"
+                onclick="changeTheme(this, light)"
+                type="img/SVG"
+              />
+            </li>
+          </ul>
+          <div class="menu" id="menu" onclick="openDrawer(this, drawer)">
+            <div></div>
+          </div>
+        </div>
+      </nav>
+      <section class="drawer close" id="drawer">
+        <div class="options">
+          <a href="./index">home</a>
+          <a
+            href="https://coinmarketcap.com/rankings/exchanges/"
+            target="_blank"
+            >markets</a
+          >
+          <a href="#">services</a>
+          <a href="#">pricing</a>
+          <a href="#">reports</a>
+          <a href="#">registration</a>
+          <a href="./contact">contact us</a>
+          <a href="#">about us</a>
+        </div>
+      </section>
+      <div class="form">
+        <form id="form" method="POST">
+          <div class="progress">
+            <span>
+              <div id="progress-bar"></div>
+              <p id="progress">0%</p>
+            </span>
+          </div>
+          <div class="fields">
+            <div class="first active-block">
+              <label for="email">Email</label><br />
+              <input
+                onkeyup="ValidateEmail(this)"
+                onfocusout="removeBorder(this)"
+                required
+                type="email"
+                name="email"
+                id="email"
+              /><br />
+              <label for="number">Contact No.</label><br />
+              <input
+                required
+                type="tel"
+                name="number"
+                onkeyup="ValidateMobile(this)"
+                id="number"
+                onfocusout="removeBorder(this)"
+              />
+            </div>
+            <div class="second">
+              <label for="otp">Verification Code</label><br />
+              <input
+                required
+                type="tel"
+                name="otp"
+                id="otp"
+                onkeyup="ValidateOTP(this)"
+                onfocusout="removeBorder(this)"
+              />
+            </div>
+            <div class="third">
+              <label for="name">Full Name</label><br />
+              <input
+                required
+                type="text"
+                onkeyup="ValidateName(this)"
+                name="name"
+                id="name"
+                onfocusout="removeBorder(this)"
+              /><br />
+              <label for="dob">Date of Birth</label><br />
+              <input
+                required
+                type="date"
+                name="dob"
+                id="dob"
+                onkeyup="ValidateDOB(this)"
+                onfocusout="removeBorder(this)"
+              /><br />
+              <label for="aadhar">Aadhar No./UID No.</label><br />
+              <input
+                required
+                type="tel"
+                minlength="12"
+                maxlength="12"
+                name="aadhar"
+                onkeyup="ValidateAadhar(this)"
+                onfocusout="removeBorder(this)"
+                id="uid"
+              /><br />
+            </div>
+            <div class="four">
+              <label for="pan">PAN No.</label><br />
+              <input
+                required
+                type="text"
+                onkeyup="ValidatePAN(this)"
+                onfocusout="removeBorder(this)"
+                id="pan"
+                name="pan"
+              /><br />
+              <label for="city">City</label><br />
+              <input
+                required
+                type="text"
+                name="city"
+                id="city"
+                minlength="4"
+                onkeyup="ValidateCity(this)"
+                onfocusout="removeBorder(this)"
+              /><br />
+              <label for="zip_code">City Zin Code</label><br />
+              <input
+                required
+                type="tel"
+                name="zip_code"
+                maxlength="6"
+                minlength="6"
+                id="zip"
+                onkeyup="ValidateCityCode(this)"
+                onfocusout="removeBorder(this)"
+              />
+            </div>
+            <div class="five">
+              <lottie-player
+                src="./resources/Json/success.json"
+                background="transparent"
+                speed="1"
+                style="width: 150px; height: 150px"
+                loop
+                autoplay
+              ></lottie-player>
+              <h2>
+                Thanks to join our family <br />
+                you will be re-direct to your account
+              </h2>
+            </div>
+            <p
+              class="sbt-btn"
+              id="sbt-btn"
+              form-progress="0"
+              onclick="sendToNext()"
+            >
+              Next
+            </p>
+          </div>
+        </form>
+        <form id="form2">
+          <h1>Login</h1>
+          <div class="login-box">
+              <div class="textbox">
+                  <label for="email">Email</label><br>
+                  <input type="email"name="email" id="email">
+              </div>
+              <div class="textbox">
+                  <label for="password">Password</label><br>
+                  <input type="password" name="password" id="password">
+              </div>
+            </div>
+            <p class="sbt-btn" id="sbt-btn">Login</p>
+      </form>
+        <p id="qlg-text">
+          Already have an account?
+          <strong onclick="ChangeForm()">Login</strong>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="./resources/JS/changeTheme.js"></script>
+  <script src="./resources/JS/nav-btn.js"></script>
+  <script src="./resources/JS/index.js"></script>
+  <script src="./resources/JS/register.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/index.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</html>

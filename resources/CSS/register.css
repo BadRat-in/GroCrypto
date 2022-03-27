@@ -1,0 +1,246 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.form form {
+  min-width: 200px;
+  width: 400px;
+  background-color: var(--light-grey);
+  min-height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-top: 20px;
+  margin: 0px 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  -webkit-animation: fade-in 0.5s ease-in;
+          animation: fade-in 0.5s ease-in;
+}
+.form form .progress {
+  margin-top: 5px;
+  height: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+.form form .progress span {
+  background-color: gray;
+  height: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.form form .progress span > div {
+  position: relative;
+  width: 0%;
+  height: 80%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid var(--progress-bar);
+  background-color: var(--progress-bar);
+  transition: 0.5s;
+}
+.form form .progress span p {
+  position: relative;
+  transform: translateY(-15px);
+  color: var(--black);
+}
+.form form .fields {
+  width: 100%;
+  margin-top: 20px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form form .fields h2 {
+  color: var(--black);
+  font-size: 16px;
+  padding: 10px;
+}
+.form form .fields input {
+  border: none;
+  outline: none;
+  height: 25px;
+  padding-left: 5px;
+  border-radius: 5px;
+  color: var(--black);
+  background-color: var(--white);
+  margin: 5px 0px 20px 0px;
+  border: 1px solid transparent;
+  transition: 0.5s;
+}
+.form form .fields input:focus, .form form .fields input:hover {
+  border: 1px solid var(--blue);
+}
+.form form .fields label {
+  color: var(--black);
+}
+.form form .fields p {
+  padding: 5px 20px;
+  transition: 0.5s;
+  background-color: greenyellow;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.form form .fields p:hover {
+  background-color: var(--blue);
+}
+.form form .fields .first,
+.form form .fields .second,
+.form form .fields .third,
+.form form .fields .four,
+.form form .fields .five {
+  overflow: hidden;
+  display: none;
+}
+.form form .fields .first.active-block,
+.form form .fields .second.active-block,
+.form form .fields .third.active-block,
+.form form .fields .four.active-block,
+.form form .fields .five.active-block {
+  display: block;
+  -webkit-animation: slide-in ease 0.5s;
+          animation: slide-in ease 0.5s;
+}
+.form form .fields .five {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: fade-in ease 0.5s;
+          animation: fade-in ease 0.5s;
+}
+.loading > div {
+  width: 30vw;
+  height: 40vh;
+  overflow: hidden;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.loading > div .lottie-player {
+  display: block;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#form {
+  display: block;
+}
+
+#form2 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: fade-in ease-in 0.5s;
+          animation: fade-in ease-in 0.5s;
+}
+#form2 h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+#form2 > div {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  -webkit-animation: slide-in ease 0.5s;
+          animation: slide-in ease 0.5s;
+}
+#form2 input {
+  border: none;
+  outline: none;
+  height: 25px;
+  padding-left: 5px;
+  border-radius: 5px;
+  color: var(--black);
+  background-color: var(--white);
+  margin: 5px 0px 20px 0px;
+  border: 1px solid transparent;
+  transition: 0.5s;
+}
+#form2 input:focus, #form2 input:hover {
+  border: 1px solid var(--blue);
+}
+#form2 label {
+  color: var(--black);
+}
+#form2 p {
+  padding: 5px 20px;
+  transition: 0.5s;
+  background-color: greenyellow;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 0px 20px 0px;
+}
+#form2 p:hover {
+  background-color: var(--blue);
+}
+
+#qlg-text {
+  margin-top: 20px;
+  color: var(--black);
+  font-size: 16px;
+  transition: 0.5s;
+}
+#qlg-text strong {
+  color: var(--blue);
+  text-decoration: underline;
+  cursor: pointer;
+}/*# sourceMappingURL=register.css.map */

@@ -1,0 +1,133 @@
+.banner-section {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+}
+
+.banner {
+  perspective: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100vw;
+  min-width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(../image/slider2.webp);
+  backdrop-filter: brightness(0.2);
+  background-size: cover;
+  background-position: center;
+  .blocks {
+    position: relative;
+    width: 5vw;
+    height: 5vh;
+    display: block;
+    animation: 1s ease-in-out forwards;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateZ(2000px);
+    background: url(../image/slider1.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  70% {
+    transform: scale(2) translateX(30px) translateZ(50px);
+  }
+  80% {
+    transform: scale(2) translateX(-30px) translateZ(50px);
+  }
+  90% {
+    transform: scale(2) translateX(0px) translateZ(50px);
+  }
+  100% {
+    transform: scale(1) translateZ(0px) translateX(0px);
+    background: url(../image/slider1.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(500px);
+  }
+
+  50% {
+    opacity: 1;
+    background: url(../image/silder3.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  80% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    background: url(../image/silder3.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    opacity: 0;
+    transform: translateX(1500px);
+  }
+
+  50% {
+    opacity: 1;
+    background: url(../image/slider2.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: scale(1) translateX(0px);
+    background: url(../image/slider2.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+  }
+}
+@keyframes animate4 {
+  0% {
+    opacity: 0;
+    transform: translate(-1500px, 1500px);
+  }
+
+  50% {
+    opacity: 1;
+    background: url(../image/silder3.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: scale(1) translateX(0px, 0px);
+    background: url(../image/silder3.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+  }
+}

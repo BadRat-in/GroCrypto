@@ -1,0 +1,74 @@
+.message-box {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 9999;
+  display: none;
+  background: greenyellow;
+  justify-content: center;
+  align-items: center;
+}
+.message-box.active {
+  display: block;
+  -webkit-animation: show-message ease 0.8s;
+          animation: show-message ease 0.8s;
+}
+.message-box.success {
+  background: greenyellow;
+}
+.message-box.error {
+  background: red;
+  color: white;
+}
+.message-box.warning {
+  background: orange;
+}
+.message-box.inactive {
+  display: block;
+  -webkit-animation: hide-message ease 0.8s;
+          animation: hide-message ease 0.8s;
+}
+
+@-webkit-keyframes show-message {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-message {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes hide-message {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+@keyframes hide-message {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}/*# sourceMappingURL=notification.css.map */
