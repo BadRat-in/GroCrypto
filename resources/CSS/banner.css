@@ -19,7 +19,6 @@
   -webkit-backdrop-filter: brightness(0.2);
           backdrop-filter: brightness(0.2);
   background-size: cover;
-  background-position: center;
 }
 .banner .blocks {
   position: relative;
@@ -35,7 +34,6 @@
     transform: scale(0) translateZ(2000px);
     background: url(../image/slider1.webp);
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -53,7 +51,6 @@
     transform: scale(1) translateZ(0px) translateX(0px);
     background: url(../image/slider1.webp);
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -65,7 +62,6 @@
     transform: scale(0) translateZ(2000px);
     background: url(../image/slider1.webp);
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -83,7 +79,6 @@
     transform: scale(1) translateZ(0px) translateX(0px);
     background: url(../image/slider1.webp);
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -96,8 +91,7 @@
   }
   50% {
     opacity: 1;
-    background: url(../image/silder3.webp);
-    background-position: center;
+    background: url(../image/slider2.webp);
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -107,8 +101,7 @@
   }
   100% {
     transform: scale(1) translateY(0px);
-    background: url(../image/silder3.webp);
-    background-position: center;
+    background: url(../image/slider2.webp);
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -121,8 +114,7 @@
   }
   50% {
     opacity: 1;
-    background: url(../image/silder3.webp);
-    background-position: center;
+    background: url(../image/slider2.webp);
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -132,8 +124,7 @@
   }
   100% {
     transform: scale(1) translateY(0px);
-    background: url(../image/silder3.webp);
-    background-position: center;
+    background: url(../image/slider2.webp);
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -147,7 +138,6 @@
   50% {
     opacity: 1;
     background: url(../image/slider2.webp);
-    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -155,7 +145,6 @@
   100% {
     transform: scale(1) translateX(0px);
     background: url(../image/slider2.webp);
-    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -169,7 +158,6 @@
   50% {
     opacity: 1;
     background: url(../image/slider2.webp);
-    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -177,7 +165,6 @@
   100% {
     transform: scale(1) translateX(0px);
     background: url(../image/slider2.webp);
-    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -190,16 +177,14 @@
   }
   50% {
     opacity: 1;
-    background: url(../image/silder3.webp);
-    background-position: center;
+    background: url(../image/slider3.webp);
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
   100% {
     transform: scale(1) translateX(0px, 0px);
-    background: url(../image/silder3.webp);
-    background-position: center;
+    background: url(../image/slider3.webp);
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -212,16 +197,14 @@
   }
   50% {
     opacity: 1;
-    background: url(../image/silder3.webp);
-    background-position: center;
+    background: url(../image/slider3.webp);
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
   100% {
     transform: scale(1) translateX(0px, 0px);
-    background: url(../image/silder3.webp);
-    background-position: center;
+    background: url(../image/slider3.webp);
     background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0);

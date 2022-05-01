@@ -54,6 +54,19 @@
           vertical-align: baseline;
         }
       }
+      .hint {
+        position: absolute;
+        display: none;
+        transform: translate(310px, 5px);
+        background: yellow;
+        padding: 5px;
+        border-radius: 0.5rem;
+        animation: fade-in ease-in 0.5s;
+        span {
+          color: rgba($color: #000000, $alpha: 0.8);
+          font-size: 0.8rem;
+        }
+      }
       textarea {
         border-radius: 5px;
         border: 1px solid transparent;
@@ -94,7 +107,7 @@
       padding: 20px;
       max-width: 290px;
       padding: 20px;
-      .input-group{
+      .input-group {
         max-width: 260px;
       }
     }

@@ -56,6 +56,20 @@
   line-height: 0px;
   vertical-align: baseline;
 }
+.contact-form .form .input-group .hint {
+  position: absolute;
+  display: none;
+  transform: translate(310px, 5px);
+  background: yellow;
+  padding: 5px;
+  border-radius: 0.5rem;
+  -webkit-animation: fade-in ease-in 0.5s;
+          animation: fade-in ease-in 0.5s;
+}
+.contact-form .form .input-group .hint span {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.8rem;
+}
 .contact-form .form .input-group textarea {
   border-radius: 5px;
   border: 1px solid transparent;
