@@ -14,6 +14,13 @@
     $message = mysqli_error($conn);
     $result = [];
     if ($response) {
+        session_start();
+        $_SESSION['name'] = $name;
+        $_SESSION['email'] = $email;
+        $_SESSION['number'] = $mobile;
+        $result['name'] = $name;
+        $result['email'] = $email;
+        $result['number'] = $mobile;
         $result['status'] = 'success';
         $result['message'] = 'Registration Successful';
     } else {
