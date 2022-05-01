@@ -22,6 +22,11 @@
       href="./resources/image/logo.webp"
       type="image/x-icon"
     />
+    <script>
+      if (localStorage.getItem("islogin") == "true") {
+        document.getElementById("home").setAttribute("href", "./home.php");
+      }
+    </script>
     <title>Sign Up</title>
   </head>
 
@@ -51,7 +56,7 @@
       <div>
         <lottie-player
           class="lottie-player"
-          src="./resources/Json/registration.json"
+          src="./resources/Json/load.json"
           speed="1"
           loop
           autoplay
@@ -76,10 +81,7 @@
                 >markets</a
               >
             </li>
-            <li><a href="#">services</a></li>
-            <li><a href="#">pricing</a></li>
-            <li><a href="#">reports</a></li>
-
+            <li><a href="./price">pricing</a></li>
             <li><a href="#">registration</a></li>
             <li><a href="./contact">contact us</a></li>
             <li><a href="#">about us</a></li>
@@ -113,9 +115,7 @@
             target="_blank"
             >markets</a
           >
-          <a href="#">services</a>
-          <a href="#">pricing</a>
-          <a href="#">reports</a>
+          <a href="./price">pricing</a>
           <a href="#">registration</a>
           <a href="./contact">contact us</a>
           <a href="#">about us</a>
@@ -212,7 +212,7 @@
                 onkeyup="ValidateCity(this)"
                 onfocusout="removeBorder(this)"
               /><br />
-              <label for="zip_code">City Zin Code</label><br />
+              <label for="zip_code">City Pin Code</label><br />
               <input
                 required
                 type="tel"
@@ -248,20 +248,41 @@
             </p>
           </div>
         </form>
+        <div class="loader2" id="loader2">
+          <div>
+            <lottie-player class="lottie-player"
+              src="./resources/Json/load.json"
+              loop
+              autoplay
+            />
+          </div>
+        </div>
         <form id="form2">
           <h1>Login</h1>
           <div class="login-box">
-              <div class="textbox">
-                  <label for="email">Email</label><br>
-                  <input type="email"name="email" id="email">
-              </div>
-              <div class="textbox">
-                  <label for="password">Password</label><br>
-                  <input type="password" name="password" id="password">
-              </div>
+            <div class="textbox">
+              <label for="email">Email</label><br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                onkeyup="ValidateEmail(this)"
+                onfocusout="removeBorder(this)"
+              />
             </div>
-            <p class="sbt-btn" id="sbt-btn">Login</p>
-      </form>
+            <div class="textbox">
+              <label for="password">Password</label><br />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                onfocusout="removeBorder(this)"
+                onkeyup="ValidatePass()"
+              />
+            </div>
+          </div>
+          <p class="sbt-btn" id="sbt-btn" onclick="Login()">Login</p>
+        </form>
         <p id="qlg-text">
           Already have an account?
           <strong onclick="ChangeForm()">Login</strong>
@@ -273,6 +294,7 @@
   <script src="./resources/JS/nav-btn.js"></script>
   <script src="./resources/JS/index.js"></script>
   <script src="./resources/JS/register.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/index.min.js"></script>
+  <script src="./resources/JS/login.js"></script>
+  <script src="./resources/JS/notification.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </html>

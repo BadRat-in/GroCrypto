@@ -57,7 +57,7 @@
             type="image/GIF"
           />
           <ul id="nav-list">
-            <li><a href="./index">home</a></li>
+            <li><a href="./index" id="home">home</a></li>
             <li>
               <a
                 href="https://coinmarketcap.com/rankings/exchanges/"
@@ -65,11 +65,10 @@
                 >markets</a
               >
             </li>
-            <li><a href="#">services</a></li>
-            <li><a href="#">pricing</a></li>
-            <li><a href="#">reports</a></li>
-
-            <li><a href="./registration">registration</a></li>
+            <li><a href="./price">pricing</a></li>
+            <li id="register">
+              <a href="./registration"> registration </a>
+            </li>
             <li><a href="#">contact us</a></li>
             <li><a href="#">about us</a></li>
             <li>
@@ -96,16 +95,14 @@
       </nav>
       <section class="drawer close" id="drawer">
         <div class="options">
-          <a href="./index">home</a>
+          <a href="./index" id="home">home</a>
           <a
             href="https://coinmarketcap.com/rankings/exchanges/"
             target="_blank"
             >markets</a
           >
-          <a href="#">services</a>
-          <a href="#">pricing</a>
-          <a href="#">reports</a>
-          <a href="./registration">registration</a>
+          <a href="./price">pricing</a>
+          <a href="./registration" id='register'>registration</a>
           <a href="#">contact us</a>
           <a href="#">about us</a>
         </div>
@@ -151,6 +148,13 @@
       </section>
     </div>
   </body>
+  <script>
+    console.log(localStorage.getItem("islogin"));
+    if (localStorage.getItem("islogin") === "true") {
+      document.getElementById("home").setAttribute("href", "./home");
+      document.getElementById('register').style.display = "none";
+    }
+  </script>
   <script src="./resources/JS/contactUs.js"></script>
   <script src="./resources/JS/changeTheme.js"></script>
   <script src="./resources/JS/nav-btn.js"></script>

@@ -26,7 +26,7 @@
 <img align="left" alt="Git" width="40px" src="./README/git.png" />
 <img align="left" alt="GitHub" width="40px" src="./README/github.png" />
 <img align="left" alt="Terminal" width="40px" src="./README/terminal.png" />
-<img align="left" alt="Terminal" width="40px" src="./README/sass-logo-2.png" />
+<img align="left" alt="Terminal" width="40px" src="./README/sass-logo.png" />
 <br />
 
 
